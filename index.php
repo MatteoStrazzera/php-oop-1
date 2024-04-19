@@ -5,25 +5,20 @@ class Production
     public $title;
     public $language;
     public $rating;
+
+    public function __construct(string $title, string $language, int $rating)
+    {
+        $this->title = $title;
+        $this->language = $language;
+        $this->rating = $rating;
+    }
 }
 
-$favMovie1 = new Production();
+$favMovie1 = new Production('Nuovo Cinema Paradiso', 'Italian', 10);
 
-$favMovie1->title = 'Nuovo Cinema Paradiso';
-$favMovie1->language = 'Italian';
-$favMovie1->rating = 10;
+$favMovie2 = new Production('The Hateful Eight', 'English', 8);
 
-$favMovie2 = new Production();
-
-$favMovie2->title = 'The Hateful Eight';
-$favMovie2->language = 'English';
-$favMovie2->rating = 8;
-
-$favMovie3 = new Production();
-
-$favMovie3->title = 'Gangs of New York';
-$favMovie3->language = 'English';
-$favMovie3->rating = 9;
+$favMovie3 = new Production('Gangs of New York', 'English', 9);
 
 var_dump($favMovie1, $favMovie2, $favMovie3);
 ?>
